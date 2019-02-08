@@ -1,9 +1,9 @@
 <template>
-<form  v-on:submit="register()">
+<form  v-on:submit="login()">
         <h1>Login</h1>
     <div>
     Email : 
-    <input type="email"  name="email" v-model="email" placeholder="Email"><br>
+    <input type="email"  name="email" v-model="email" placeholder="Email" required><br>
     </div>
     <div class="form-input">
     Password :
@@ -28,7 +28,7 @@ export default {
       }
   },
   methods: {
-    register(){
+    login(){
       var data = {
           'email' : this.email,
           'password': this.password 
